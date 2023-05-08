@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Add Offer";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Offer/AddOffer.css">
+</head>
+@model OfferModel
+
+<!-- Form -->
+
+<form method="post" asp-action="AddOffer" class="form-container">
+    <div>
+        <label for="Mode">Mode:</label>
+        <input type="text" id="Mode" name="Mode" value="@Model.Mode" />
+    </div>
+    <div>
+        <label for="MovementType">Movement Type:</label>
+        <input type="text" id="MovementType" name="MovementType" value="@Model.MovementType" />
+    </div>
+    <div>
+        <label for="Incoterm">Incoterm:</label>
+        <input type="text" id="Incoterm" name="Incoterm" value="@Model.Incoterm" />
+    </div>
+    <div>
+        <label for="CountriesCities">Countries-Cities:</label>
+        <input type="text" id="CountriesCities" name="CountriesCities" value="@Model.CountriesCities" />
+    </div>
+    <div>
+        <label for="PackageType">Package Type:</label>
+        <input type="text" id="PackageType" name="PackageType" value="@Model.PackageType" />
+    </div>
+
+    <div>
+        <label for="Unit1">Unit-1 :</label>
+        <input type="text" id="Unit1" name="Unit1" value="@Model.Unit1" />
+    </div>
+    <div>
+        <label for="Unit2">Unit-2:</label>
+        <input type="text" id="Unit2" name="Unit2" value="@Model.Unit2" />
+    </div>
+    <div>
+        <label for="Currency">Currency:</label>
+        <input type="text" id="Currency" name="Currency" value="@Model.Currency" />
+    </div>
+    <button type="submit">Save Offer</button>
+</form>

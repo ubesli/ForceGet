@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Offer List";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Offer/OfferList.css">
+</head>
+@model List<OfferModel>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Mode</th>
+                <th>Movement Type</th>
+                <th>Incoterm</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr onclick="location.href='@Url.Action("OfferByFilter", "Offer", item)'">
+
+                    <td>@item.Id</td>
+                    <td>@item.Mode</td>
+                    <td>@item.MovementType</td>
+                    <td>@item.Incoterm</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+

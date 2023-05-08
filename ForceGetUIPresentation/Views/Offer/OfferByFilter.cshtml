@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Offer Details";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Offer/OfferByFilter.css">
+</head>
+@model OfferModel
+
+<div class="table-container">
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Mode</th>
+            <th>Movement Type</th>
+            <th>Incoterm</th>
+            <th>CountriesCities</th>
+            <th>PackageType</th>
+            <th>Unit1</th>
+            <th>Unit2</th>
+            <th>Currency</th>
+        </tr>
+    </thead>
+    <tbody>
+             <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Mode</td>
+                <td>@Model.MovementType</td>
+                <td>@Model.Incoterm</td>
+                <td>@Model.CountriesCities</td>
+                <td>@Model.PackageType</td>
+                <td>@Model.Unit1</td>
+                <td>@Model.Unit2</td>
+                <td>@Model.Currency</td>
+
+             </tr>
+        
+    </tbody>
+</table>
+</div>
